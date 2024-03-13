@@ -6,9 +6,9 @@ const port = 4050;
 
 app.use(cors({
     origin: '*',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    optionsSuccessStatus: 200
-}));
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+  }));
 
 app.use(express.json()); // Add this line to parse JSON request bodies
 
